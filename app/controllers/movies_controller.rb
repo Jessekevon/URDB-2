@@ -15,7 +15,7 @@ class MoviesController < ApplicationController
 
   def show
     @showtimes = @movie.showtimes
-    @showtimes = @movie.showtime.new
+    @showtime = @movie.showtimes.new
   end
 
   # GET /movies/new
