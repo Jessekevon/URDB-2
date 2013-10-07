@@ -9,7 +9,13 @@ class MoviesController < ApplicationController
 
   # GET /movies/1
   # GET /movies/1.json
+  # 
+  # We set @showtimes equal to all the Showtime instances associated with @movie, 
+  # we set @showtime to a new, unsaved instance of Showtime so that we have an object for
+
   def show
+    @showtimes = @movie.showtimes
+    @showtimes = @movie.showtime.new
   end
 
   # GET /movies/new
